@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<body>
+<head>
+   <link rel="stylesheet" href="styles.css"> 
+    <title> Who We Are</title>
+</head>
+    <nav>
+    <div class="nav-links">
+      <a href="dreamcollage.html"> NextPlay Institute</a>
+      <a href="about.html">About the college</a>
+      <a href="#">Programs/classes</a>
+      <a href="#">support</a>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+    </div> 
+</nav>
+
+    <h2>Welcome to NextPlay institute</h2>
+<h1>Who We Are</h1>
+<p> NextPlay institute is a trade, and sports focus collage located in the moutains of Californa with a great view and promisiing future NextPlay institute could be for you.
+    We offer Carpentry, plumbing, mechanic, electrician, and etc. This school is for the people who what to be hands on and active.
+</p>
+ 
+<div id="modalBackdrop" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);">
+  <div style="background:#191d1f;padding:2em 1.5em;border-radius:20px;max-width:350px;margin:100px auto;">
+    <p> Email:
+    telly.rollins@hgs.hiddengeniusproject.org
+    Number: (707)-470-6825
+    </p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+     <button onclick="toggleMode()" id="modeBtn"> Dark Mode</button>
+
+<script>
+         function showMessage() {
+            document.getElementById("demo").innerHTML= "Hello, Welcome to Bayfront Tech student portal";
+        }
+        function toggleMode() {
+            document.body.classList.toggle('light-mode');
+            const btn = document.getElementById("modeBtn");
+            if (document.body.classList.contains('light-mode')) {
+                btn.innerText = " Light Mode";
+            } 
+            else {
+                btn.innerText = "Dark Mode";
+            }
+        }
+    
+        function openModal() {
+    document.getElementById('modalBackdrop').style.display = 'block';
+  }
+  function closeModal() {
+    document.getElementById('modalBackdrop').style.display = 'none';
+  }
+    
+    document.getElementById("myForm").addEventListener("submit", function(event ){
+        event.preventDefault(); let name = document.getElementById("nameInput").value;
+        document.getElementById("result").innerhtml= "Hello," + name + "! :wave:";
+    });
+    </script>
+ 
+ 
+ <style>
+        
+        body{
+        background: #0f0f0f;
+      color: #9916b3;
+      transition: background 0.3s, color 0.3s;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+
+        body.light-mode{
+        background: #ffffff;
+      color: #000000;
+        }
+    
+        video {
+  text-align: center;
+        }
+    video {
+  display: block;
+  margin: auto;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    .nav-links {
+    display: flex;
+    gap: 18px;
+    background: #ffffff;
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    color: #0077ff;
+  }
+
+  /* Search bar */
+  .search-box {
+    position: relative;
+  }
+
+  .search-box input {
+    padding: 8px 14px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 180px;
+    transition: 0.3s;
+  }
+
+  .search-box input:focus {
+    width: 240px;
+    border-color: #0077ff;
+  }
+    </style>
+</body>
+</html>
